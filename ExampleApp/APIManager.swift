@@ -1,5 +1,5 @@
 //
-//  JSONManager.swift
+//  APIManager.swift
 //  ExampleApp
 //
 //  Created by Kamil on 20.02.2017.
@@ -14,7 +14,6 @@ class APIManager {
     let url = "https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyAeFyLkiWvA_4qvsLazMIwel5DhdD5yhNE"
     
     func getData(longURL: String, completion:@escaping ([String : String]) -> Void) {
-        
         let parameters = ["longUrl": longURL]
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON{ (response) -> Void in 
